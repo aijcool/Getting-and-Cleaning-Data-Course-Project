@@ -39,4 +39,4 @@ colnames(df)[1:2]<-c("volunteer","activity")
 
 #From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 df_sec<-df %>% group_by(volunteer,activity) %>% summarise_all(mean)
-write.csv(df_sec,file="second_data.csv")
+write.table(df_sec,file="second_data.txt", row.name=FALSE)
